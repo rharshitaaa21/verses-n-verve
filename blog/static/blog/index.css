@@ -8,7 +8,18 @@
     align-items: flex-start;
     margin: 3rem auto;
   }
+  .post{
+
+  }
+/*   
+  #main-navigation{
+    text-align: center;
+  } */
   
+  .post{
+text-align: center;
+
+  }
   #welcome img {
     width: 10rem;
     height: 10rem;
@@ -46,6 +57,9 @@
     text-align: center;
   }
   
+  li{
+    display: grid;
+  }
   #latest-posts ul {
     list-style: none;
     margin: 0;

@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+ {% extends "base.html" %}
 {% load static %}
-
+{% comment %}
 {% block  title %} 
 My Blog
 {% endblock  %}
@@ -17,7 +17,7 @@ My Blog
 
 <section id="welcome">
     <header>
-        <img src="" alt="Dee- The Author of this Blog">
+        <img src="{% static "blog/images/max.png"%}" alt="Dee- The Author of this Blog">
         <h2> DEE's BLOG </h2>
 
     </header>
@@ -26,7 +26,7 @@ My Blog
     </p>
 </section>
 
-<section id="lastest-posts">
+<section id="latest-posts">
     <h2> My Latest Thoughts </h2>
     <ul>
         <li>  
@@ -64,4 +64,65 @@ My Blog
 </p>
 <p> My goal is to keep on growing as a developer -- and if I could   help youdo the same, I'd be very happy!</p>
 </section>
-{% endblock content  %}
+{% endblock   %} {% endcomment %}
+
+
+{% block title %} 
+My Blog 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+<header id="main-navigation">
+  <h1><a href="">Dee' Blog</a></h1>
+  <nav>
+    <a href="">All Posts</a>
+  </nav>
+</header>
+
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/max.jpg" %}" alt="Dee - The Author Of This Blog" />
+    <h2>HARSHITA'S BLOG</h2>
+  </header>
+  <p>Hi, I am Dee and I love to blog about weight-loss and the self development!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain Hiking"  style="width:50em"/>
+          <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>
+              There's nothing like the views you get when hiking in the
+              mountains! And I wasn't even prepared for what happened whilst I
+              was enjoying the view!
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+    
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    I love programming, I love to help others and I enjoy exploring new
+    technologies in general!
+  </p>
+  <p>
+    My goal is to keep on growing as a developer - and if I could help you do
+    the same, I'd be very happy!
+  </p>
+</section>
+{% endblock %}
