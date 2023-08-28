@@ -1,31 +1,30 @@
- {% extends "base.html" %}
+{% extends "base.html" %} 
 {% load static %}
+
 {% block title %} 
 My Blog 
 {% endblock %} 
 
 {% block css_files %}
-
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
   <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock %}
 
 {% block content %}
-
-
 <section id="welcome">
   <header>
     <img src="{% static "blog/images/max.jpg" %}" alt="Dee - The Author Of This Blog" />
-    <h2>HARSHITA'S BLOG</h2>
+    <h2>Dee'S BLOG</h2>
   </header>
-  <p>Hi, I am Dee and I love to blog about weight-loss and the self development!</p>
+  <p>Hi, I am Dee and I love to blog about tech and the world!</p>
 </section>
 
-<section class="latest-posts">
+<section id="latest-posts">
   <h2>My Latest Thoughts</h2>
 
   <ul>
     {% for post in posts %}
-    {% include "blog/includes/post.html"%}
+      {% include "blog/includes/post.html" %}
     {% endfor %}
   </ul>
 </section>
