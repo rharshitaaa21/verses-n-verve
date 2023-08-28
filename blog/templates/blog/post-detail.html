@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% load static %}
+ {% block title %} 
+ This Post Title
+  {% endblock %} 
+  {% block css_files %}
+
+
+<link rel="stylesheet" href=" {% static 'blog/post-detail.css' %} "/>
+
+{% endblock %}
+ {% block content %}
+<section id="summary">
+  <h2>Post Title</h2>
+  <article>
+    <img src=" {% static 'blog/images/mountains.jpg' %} " alt="Post Title" />
+    <address>By Dee</address>
+    <div>Last Updated on <time> June 8th </time></div>
+  </article>
+</section>
+
+<main>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quisquam?
+    Natus iusto deleniti dignissimos voluptatibus sunt? Dolorum, totam sunt et
+    iste ratione tenetur nisi voluptatum. Nam sint quam quae asperiores!
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quasi
+    similique numquam consequatur illum, saepe quas, quos dolore eligendi vel
+    sed voluptates ut quia cupiditate officiis sapiente vero! Nesciunt, nam.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quasi
+    similique numquam consequatur illum, saepe quas, quos dolore eligendi vel
+    sed voluptates ut quia cupiditate officiis sapiente vero! Nesciunt, nam.
+  </p>
+</main>
+
+{% endblock %}
